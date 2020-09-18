@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc 
+	http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring 
+		http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+	<!-- 配置Spring 主要配置和业务逻辑有关的 -->
+	<!-- 数据源,事务控制 -->
+
+	<!-- 扫描业务逻辑组件 -->
+	<context:component-scan
+		base-package="org.vector">
+		<!-- 不扫控制器 -->
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+
+		<!-- 将数据源交给spring管理  -->
+		<context:property-placeholder
+		location="classpath:jdbc.properties"/>
+	<bean class="com.alibaba.druid.pool.DruidDataSource"
+		id="dataSource">
+		<property name="driverClassName" value="${jdbc.driverClass}"/>
+		<property name="url" value="${jdbc.url}"/>
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+		<property name="filters" value="${jdbc.filters}"/>
+		<property name="maxActive" value="${jdbc.maxActive}"/>
+		<property name="initialSize" value="${jdbc.initialSize}"/>
+		<property name="maxWait" value="${jdbc.maxWait}"/>
+		<property name="minIdle" value="${jdbc.minIdle}"/>
+		<property name="validationQuery"
+			value="${jdbc.validationQuery}"/>
+		<property name="testWhileIdle" value="${jdbc.testWhileIdle}"/>
+		<property name="testOnBorrow" value="${jdbc.testOnBorrow}"/>
+		<property name="testOnReturn" value="${jdbc.testOnReturn}"/>
+		<property name="maxOpenPreparedStatements"
+			value="${jdbc.maxOpenPreparedStatements}"/>
+		<property name="removeAbandoned"
+			value="${jdbc.removeAbandoned}"/>
+		<property name="removeAbandonedTimeout"
+			value="${jdbc.removeAbandonedTimeout}"/>
+		<property name="logAbandoned" value="${jdbc.logAbandoned}"/>
+	</bean>
+	<!--事务(提交,回滚)管理 org.springframework.jdbc.datasource.DataSourceTransactionManager -->
+	<bean
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		id="dataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- 基于注解的事务管理 -->
+	<tx:annotation-driven
+		transaction-manager="dataSourceTransactionManager"/>
+
+	<!-- 对mybatis的整合 -->
+	<!-- <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory"> 
+		这是MyBatis提供的 -->
+	<!-- com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean 
+		mybatis-plus提供的 -->
+	<bean id="sqlSessionFactory"
+		class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
+		<!-- 指定数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 指定mybatis全局配置文件的位置 -->
+		<property name="configLocation"
+			value="classpath:mybatis-config.xml"></property>
+		<property name="typeAliasesPackage"
+			value="org.vector.domain"></property>
+		<!-- 指定myabtis配置文件的位置 -->
+		<!-- <property name="mapperLocations" value="classpath:mapper/*.xml"></property> -->
+
+		<!--注册mybatisPlus的全局策略配置 -->
+		<!-- <property name="globalConfiguration" ref="globalConfiguration"></property> -->
+	</bean>
+
+	<!-- 配置扫描器 自动将mybatis接口的实现加入到ioc容器中 -->
+	<!--org.mybatis.spring.mapper.MapperScannerConfigurer -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 扫描所有的dao接口的实现,加入到ioc容器中 -->
+		<property name="basePackage" value="org.vector.mapper"></property>
+		<property name="sqlSessionFactoryBeanName"
+			value="sqlSessionFactory"/>
+	</bean>
+
+	<!--定义mybatisPlus的全局策略配置 -->
+	<!-- <bean id="globalConfiguration" class="com.baomidou.mybatisplus.entity.GlobalConfiguration"> 
+		解决下划线到驼峰命名 2.3版本以后默认为true <property name="dbColumnUnderline" value="true"></property> 
+		设置全局主键自增,注解的方式只能那个类起作用 <property name="idType" value="0" ></property> <property 
+		name="tablePrefix" value="tabl_" ></property> </bean> -->
+
+</beans>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38414c49-862d-4d84-9b4a-812c97818c2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/app.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/ArticleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/CuserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/EncodeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/LoginIpRecordMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/MenuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/MmoduleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/MpopeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/MroleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/MuserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/MusicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/RollingpicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/RrMappingMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/TextMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/com/jlc/dao/mapper/WashCarCardMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/spring-datasource-common.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/spring-mvc-applicatonContext-context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../washcar/washcar/build/classes/spring-mvc-context.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1hM74pDFz105I3sxKWvdyYpsvlI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/idea/idea-workspace/tensqusre" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.43" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/news/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$">
+          <settings>
+            <option name="CONTEXT_PATH" value="/news" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_news_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="55834" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38414c49-862d-4d84-9b4a-812c97818c2e" name="Default Changelist" comment="" />
+      <created>1599808918444</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599808918444</updated>
+      <workItem from="1599808930731" duration="584000" />
+      <workItem from="1599809532819" duration="28000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
